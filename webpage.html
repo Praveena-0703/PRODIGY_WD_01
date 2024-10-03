@@ -1,254 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-            pre{text-align: left;}
-        </style>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Navigation Menu</title>
-    <link rel="stylesheet" href="webpage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Desktop Mode -->
+    <title>Skullcandy Navigation Menu</title>
+    <link rel="stylesheet" href="sstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-
-    <!-- Navigation Menu -->
-    <nav class="navbar" id="navbar">
-        <link rel="shortcut icon" type="imaage/x-icon" href="data:image/jpeg;base64,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"/>
+    <header>
+        <nav id="navbar">
             <div class="logo">
-                <a href="#">
-                    <img src="data:image/png;base64,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" width="150" height="100">
-                </a>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsxV8aT3ESrAn87XdGITUPX5JVBZ40zJUac0jvzdtdffVFgvnrWxKzk2Tm&s=10" />
             </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Products</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact Us</a></li> 
-        </ul>
-    </nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-container">
+        <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+            <input type="text" id="search-bar" placeholder="Search...">
+        </nav>
+    </header>
 
-    <!-- Sample Sections -->
-    <section id="home" class="section"> 
-        <h1>Hello</h1>
-        <h2>Welcome to the home section.</h2>
-        <style type="text/css">
-            .home{
-                height:500px;
-                width:1242px;
-                background-image:url("https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2023/09/1a9bc57f-0570-4bc7-8766-60590e4a63ed_P8_desktop.jpg");
-                background-repeat:no-repeat;
-                background-position: center;
-                background-size: cover;
-            }
-        </style>
-        <div class="home"></div>
-    </section>
-
-    <section id="services" class="section">
-        <h1>Our Products</h1>
-        <p>Details about services offered.</p>
-        <pre>
-
-
-
-
-
-        </pre>
-        <style type="text/css">
-            .p1{
-                height:250px;
-                width:250px;
-                background-image:url("https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2023/09/CrusherANC2_Hero_RD_New.jpg");
-                background-repeat:no-repeat;
-                background-position: left;
-                background-size: cover;
-                float: left;
-                padding: 20px;
-            }
-        </style>
-        <div class="p1"></div>
-
-        <style type="text/css">
-            .p2{
-                height:250px;
-                width:250px;
-                background-image:url("https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2023/10/RailANC_Black_Hero02_R02_Wireless_5.jpg");
-                background-repeat:no-repeat;
-                background-position: center;
-                background-size: cover;
-                float: left;
-                padding: 25px;
-            }
-        </style>
-        <div class="p2"></div>
-
-        <style type="text/css">
-            .p3{
-                height:250px;
-                width:250px;
-                background-image:url("https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2024/07/EcoBuds_Glacier_S2EOW-Q764_Buds-Case-Hero-2_v004.jpg");
-                background-repeat:no-repeat;
-                background-position:right;
-                background-size: cover;
-                float: right;
-                padding: 30px;
-            }
-        </style>
-        <div class="p3"></div>
-        
-        <style type="text/css">
-            .p4{
-                height:250px;
-                width:250px;
-                background-image:url("https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2024/06/PLYR_Black-Digi-Hype_S6PPY-S963_Hero_v001.jpg");
-                background-repeat:no-repeat;
-                background-position:right;
-                background-size: cover;
-                float: right;
-                padding: 30px;
-            }
-        </style>
-        <div class="p4"></div>
-<pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   Crusher ANC 2 sensory                               Rail ANC True                             Skullcandy ECOBuds Sustainable                 PLYR Multi Platform 
-     Bass Headphones                                  Wireless Earbuds                              True Wireless Earbuds                      Wirless Gaming Headset
-</pre>   
-    </section>
-
-    <section id="about" class="section">
-        <h1>About Us</h1>
-    
-        <style type="text/css">
-            .au{
-                height:500px;
-                width:1242px;
-                background-image:url("https://img.freepik.com/premium-photo/headphones-white-table-gray-background-product-photography-minimalism-simple-sleek-design-silver-color_644874-5986.jpg");
-                background-repeat:no-repeat;
-                background-position: center;
-                background-size: cover;
-            }
-            
-        </style>
-        <div class="au">
-            <style>
-                centeralign{
-                    text-align: left;
-                }
-                </style>
-            <pre>
-    
-                <h2>
-        At Skullcandy, we believe in the power of sound
-        to elevate experiencesand connect people.
-        Founded in 2003, our mission has always been to
-        disrupt the audio industry with innovative designs 
-        and cutting-edge technology, all while staying true 
-        to our roots in action sports and music culture.
-        We envision a world where everyone can enjoy premium 
-        sound without breaking the bank. 
-        Our products—ranging from headphones and earbuds to 
-        accessories—are crafted to deliver high-quality audio
-        while reflecting individual style. We prioritize comfort,
-        durability,and functionality, ensuring our gear fits
-        seamlessly into any lifestyle.
-            </h3>
-            </pre></p>     
+    <section id="home">
+        <h1>Welcome to Skullcandy</h1>
+        <p>Your sound, your style.</p>
+        <div class="deal-images">
+            <img src="https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2022/08/Smokin-Buds_mobile-images.jpg" alt="Deal 1">
+            <img src="https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2023/09/4a327b13-6d0d-41f6-be6c-04b987137c4a_P8_mobile2.jpg" alt="Deal 1">
+            <img src="https://d3lnc7yu1ksdj.cloudfront.net/wp-content/uploads/2023/10/38b36329b66c503669993e13b8051241526c7fc4cd182011c83b50f590bb588d-copy1234.jpg" alt="Deal 1">
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <h1>Contact Us</h1>
-        <p>Get in touch with us here.</p>
-
-    <script src="webpage.js"></script>
-
-
-    <footer class="footer section">
-        <div class="footer__container container grid">
-
-            <div class="footer__content">
-                <h3 class="footer__title">Products</h3>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#" class="footer__link">Headphones</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Earphones</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Earbuds</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Accesories</a>
-                    </li>
-                </ul>
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA3d1xjoDHCkew1DOz3_kFvkcF6RPGNZxTQMYpFkwBnLF66wgbBUYajxI&s=10" alt="Skullcandy Crusher">
+                <h3>Skullcandy Crusher</h3>
+                <p>₹5,999</p>
             </div>
-
-            <div class="footer__content">
-                <h3 class="footer__title">Support</h3>
-
-                <ul class="footer__links">
-                    <li>
-                        <a href="#" class="footer__link">Product help</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Register</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Updates</a>
-                    </li>
-                    <li>
-                        <a href="#" class="footer__link">Provides</a>
-                    </li>
-                </ul>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlY0i7OO6feMeR78e5EaM5MyQBY6Q4DVIyddWkUV_LEQskv_0ERkVfNKAU&s=10" alt="Skullcandy Hesh 2">
+                <h3>Skullcandy Hesh 2</h3>
+                <p>₹4,499</p>
             </div>
-
-            <div class="footer__content">
-                <form action="" class="footer__form">
-                    <input type="email" placeholder="Email" class="footer__input">
-                    <button class="button button--flex">
-                        <i class="ri-send-plane-line button__icon"></i> Subscribe
-                    </button>
-                </form>
-
-                <div class="footer__social">
-                    <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
-                        <i class="ri-facebook-fill"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-                        <i class="ri-instagram-line"></i>
-                    </a>
-                    <a href="https://twitter.com/" target="_blank" class="footer__social-link">
-                        <i class="ri-twitter-line"></i>
-                    </a>
-                </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/41meY8m1PSL.jpg" alt="Skullcandy Venue">
+                <h3>Skullcandy Venue</h3>
+                <p>₹7,499</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhsjiDVwUZKnL7ZFx-AslzQ3YvnUZA2yuvw41jzX08A3OhRxai3fDh46Ut&s=10" alt="Skullcandy Ink'd+">
+                <h3>Skullcandy Ink'd+</h3>
+                <p>₹1,799</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHepdCgkUsTaHSugsLjuBB3UWs_z0D0fUtRg&usqp=CAU" alt="Skullcandy Push Ultra">
+                <h3>Skullcandy Push Ultra</h3>
+                <p>₹8,999</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRygWnRQMIeOJuewJksw-mSpKvpXI4gabxrPAxoR66JeeENSLiVU9_DeRQ&s=10" alt="Skullcandy Riff Wireless">
+                <h3>Skullcandy Riff Wireless</h3>
+                <p>₹3,999</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2_qBxJz-fh6WRe748DMo4JJoTShb3Wr-5bMlKPPt36Y7Px4gYxNo5HQM&s=10" alt="Skullcandy Sesh Evo">
+                <h3>Skullcandy Sesh Evo</h3>
+                <p>₹6,499</p>
+            </div>
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfNkGuL38UcYLcllw8W_6Fq-RdD1Md3rLUGQ&usqp=CAU" alt="Skullcandy Indy ANC">
+                <h3>Skullcandy Indy ANC</h3>
+                <p>₹9,999</p>
             </div>
         </div>
-    </footer>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-us">
+            <p>At Skullcandy, we believe in the power of sound to elevate experiences and connect people.Our mission has always been to disrupt the audio industry with innovative designs and cutting-edge technology, all while staying true to our roots in action sports and music culture.We envision a world where everyone can enjoy premium sound without breaking the bank.Our products—ranging from headphones and earbuds to accessories—are crafted to deliver high-quality audio while reflecting individual style. We prioritize comfort, durability,and functionality, ensuring our gear fits seamlessly into any lifestyle.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+    <h2>Contact Us</h2>
+    <p>For inquiries, please reach out to us:</p>
+    <p>Email: contact@skullcandy.com</p>
+    <p>Phone: +91 12345 67890</p>
+    <div class="social-media">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/13266/13266170.png" alt="Facebook"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt="Instagram"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/733/733635.png" alt="Twitter"></a>
+    </div>
 </section>
 
+
+    <footer>
+        <p>&copy; 2024 Skullcandy. All Rights Reserved.</p>
+    </footer>
+
+    <script src="sscript.js"></script>
 </body>
 </html>
